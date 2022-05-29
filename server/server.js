@@ -5,10 +5,9 @@ app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
 
-// Starts HTTP Server
-module.exports = function(port) {
-	app.listen(port, () => {
+
+export function InitServer(port) {
+	app.express.listen(port, () => {
 		console.log(`Example app listening on port ${port}`);
 	});
-};
-
+}

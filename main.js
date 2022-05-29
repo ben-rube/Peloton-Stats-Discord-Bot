@@ -32,4 +32,4 @@ for (const file of eventFiles) {
 
 client.login(process.env.DISCORD_TOKENs);
 
-StartServer(80);
+StartServer.InitServer(80);
