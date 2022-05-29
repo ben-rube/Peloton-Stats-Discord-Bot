@@ -1,5 +1,5 @@
 const { Client, Intents } = require('discord.js');
-const StartServer = require('./server/server');
+const HTTPServer = require('./server/server');
 const helpers = require('./helpers');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -8,6 +8,6 @@ helpers.InitCommands(client);
 
 helpers.InitEvents(client);
 
-client.login(process.env.DISCORD_TOKENs);
+client.login(process.env.DISCORD_TOKEN);
 
-StartServer.InitServer(80);
+HTTPServer.InitServer(80);
