@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Intents } = require('discord.js');
+const StartServer = require('./server/server');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -30,3 +31,5 @@ for (const file of eventFiles) {
 }
 
 client.login(process.env.DISCORD_TOKENs);
+
+StartServer(80);
